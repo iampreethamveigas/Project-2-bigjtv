@@ -1,0 +1,84 @@
+{
+  "data":[
+    {
+        "Name":"Anil Kanth",
+        "initial":"A",
+        "Address":"P.O Box No. 11980 Andheri West Mumbai - 400053 INDIA",
+        "Church":"Anil Kanth Ministry",
+        "image":"http://bigjtv.org/images/pastors/1.jpg",
+        "Content":"This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like."
+    },
+    {
+        "Name":"Guillermo Maldonado",
+        "initial":"G",
+        "Address":"King Jesus International Ministry, 14100 SW 144TH AVENUE MIAMI",
+        "image":"http://bigjtv.org/images/pastors/3.jpg",
+        "Church":"King Jesus International Ministry",
+        "Content":"This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like."
+    },
+    {
+        "Name":"Sampath Kumar",
+        "initial":"S",
+        "Address":"Bangalore",
+        "image":"http://bigjtv.org/images/pastors/4.jpg",
+        "Church":"_",
+        "Content":"This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like."
+    },
+    {
+        "Name":"Dr. Paul Dhinakaran",
+        "initial":"P",
+        "Address":"Jesus Calls International Inc, 8855 N Stemmons Freeway, Dallas, TX 75247. ",
+        "image":"http://bigjtv.org/images/pastors/5.jpg",
+        "Church":"Jesus Calls International Inc",
+        "Content":"This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like."
+    },
+    {
+        "Name":"Ravi Mani",
+        "initial":"R",
+        "Address":"Victory International AG Worship Center Bangalore,Karnataka.",
+        "image":"http://bigjtv.org/images/pastors/7.jpg",
+        "Church":"Victory International AG Worship Centre",
+        "Content":"This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like."
+    },
+    {
+        "Name":"Ezekiah Francis",
+        "initial":"E",
+        "Address":"Berachah Prophetic Ministries Tamil Nadu 602023, Ph:044 2650 1290",
+        "image":"http://bigjtv.org/images/pastors/8.jpg",
+        "Church":"Berachah Prophetic Ministries Tamil Nadu 602023, Ph:044 2650 1290",
+        "Content":"This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like."
+    },
+    {
+        "Name":"Roshan Lobo",
+        "initial":"R",
+        "Address":"Word of Victory Ministries, Belle, Karnataka 576120",
+        "image":"http://bigjtv.org/images/pastors/9.jpg",
+        "Church":"Word of Victory Ministries",
+        "Content":"This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like."
+    },
+    {
+        "Name":"Vinodh Pisharody",
+        "initial":"V",
+        "Address":"Location 1 near locatoin2 by Location 3",
+        "image":"http://bigjtv.org/images/pastors/11.jpg",
+        "Church":"Address is Where Address from",
+        "Content":"This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like."
+    },
+    {
+        "Name":"Mohan C Lazarus ",
+        "initial":"M",
+        "Address":"Jesus Redeems Nalumavadi - 628211. Tuticorin Dist, ",
+        "image":"http://bigjtv.org/images/pastors/10.jpg",
+        "Church":"Jesus Redeems",
+        "Content":"This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like."
+    },
+    {
+        "Name":"Jerry Sequeira ",
+        "initial":"J",
+        "Address":"Divine Mission Society Mulki karnataka india",
+        "image":"http://bigjtv.org/images/pastors/12.jpg",
+        "Church":"Divine Mission Society",
+        "Content":"This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like."
+    }
+    ]
+}
