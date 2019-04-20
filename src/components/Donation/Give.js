@@ -139,7 +139,7 @@ class Give extends React.Component {
     // "INDUSTRY_TYPE_ID": "Retail109",
     // "CHANNEL_ID": "WEB"
     becomePatner = p => {
-        axios.post(`http://bigjtv.org/paytm/pgRedirect.php`, {
+        axios.post(`http://live.bigjtv.org/paytm/pgRedirect.php`, {
             headers: {
                 'Content-Type': 'application/json',
             },
