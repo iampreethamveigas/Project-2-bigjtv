@@ -133,13 +133,16 @@ class Give extends React.Component {
         }
 
     }
-    // "TXN_AMOUNT": this.state.Contribution,
-    // "ORDER_ID": "20180801",
-    // "CUST_ID": "P2018",
-    // "INDUSTRY_TYPE_ID": "Retail109",
-    // "CHANNEL_ID": "WEB"
+
     becomePatner = p => {
-        axios.post(`http://live.bigjtv.org/paytm/pgRedirect.php`, {
+       const data = {
+            "TXN_AMOUNT": this.state.Contribution,
+            "ORDER_ID": "20180801",
+            "CUST_ID": "P2018",
+            "INDUSTRY_TYPE_ID": "Retail109",
+            "CHANNEL_ID": "WEB"
+        }
+        axios.post(`http://live.bigjtv.org/paytm/pgRedirect.php`, data, {
             headers: {
                 'Content-Type': 'application/json',
             },
