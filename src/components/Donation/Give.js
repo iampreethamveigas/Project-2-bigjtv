@@ -141,15 +141,14 @@ class Give extends React.Component {
     becomePatner = p => {
         axios.post(`http://bigjtv.org/paytm/pgRedirect.php`, {
             headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
-                'Accept': 'application/json',
                 'Content-Type': 'application/json',
             },
-            crossorigin: true,
         })
             .then(res => {
                 console.log(res)
+            })
+            .catch(error => {
+                console.log(error)
             })
 
     }
@@ -273,7 +272,7 @@ class Give extends React.Component {
                                         </ul>
 
                                     </div>
-                                    <Button variant="outlined" color="primary" className={[classes.givebutton]} style={{ maxWidth: (width / 2 + 20), }}>
+                                    <Button variant="outlined" color="primary" className={[classes.givebutton]} style={{ maxWidth: (width / 2 + 20), }} onClick={this.becomePatner}>
 
                                         <Typography variant="title" color="secondary" style={{ color: '#fff' }}>
                                             SUPPORT
