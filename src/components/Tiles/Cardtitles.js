@@ -6,6 +6,7 @@ import InfoIcon from '@material-ui/icons/PlayArrow';
 import AccessibilityNew from '@material-ui/icons/AccessibilityNew'
 import GridContainer from '../Grid/GridContainer'
 import GridItem from '../Grid/GridItem'
+import HeaderTitile from '../common/HeaderTitle'
 
 import { b, m } from '../common/Device'
 import NavPills from '../Navpills/NavPills';
@@ -15,16 +16,15 @@ import CardHeader from '../Card/CardHeader'
 import CardFooter from '../Card/CardFooter'
 import loginStyle from "../../assets/jss/material-kit-react/views/componentsSections/loginStyle";
 
- import Image1 from '../../assets/img/faces/marc1.jpg'
+import Image1 from '../../assets/img/faces/marc1.jpg'
 import Image2 from '../../assets/img/faces/camp1.jpg'
-
 import Jhony from '../../assets/img/faces/JohnnyLever.jpg'
-
 import image from "../../assets/img/sign.jpg";
 
 
- 
 
+const width = window.innerWidth
+const hwidth = ((width / 2) - 40)
 const testdata = [];
 testdata[0] = [
     {
@@ -157,7 +157,7 @@ const styles = theme => ({
     root: {
         display: 'flex',
         flexWrap: 'wrap',
-        justifyContent: 'space-around',
+        justifyContent: 'space-between',
         overflow: 'hidden',
         backgroundColor: theme.palette.background.paper,
         padding: 15,
@@ -200,22 +200,35 @@ class TilebarGridList extends React.Component {
         const { classes } = this.props;
         return testdata[i].map((t, i) => {
             return (
-                <Card style={{ maxWidth: m ? 180 : 300 }} key={i}>
-                    <CardHeader color="primary" className={classes.cardHeader}>
-                        <div>
+                <Card style={{ maxWidth: m ? hwidth : 300 }} key={i}>
+                    {/* <img src={t.img} width={m ? 80 : 'inherit'} height={m ? 180 : 280} /> */}
+
+                    <CardHeader color="primary" className={classes.cardHeader}
+                        style={{
+                            backgroundImage: "url(" + t.img + ")", backgroundSize: "cover", backgroundRepeat: "no-repeat", backgroundPosition: "center",
+                            padding: m ? 0 : false, margin: m ? 0 : false,
+                        }}>
+                        <div style={{ padding: m ? 0 : false, margin: m ? 0 : false, }}>
                             <AccessibilityNew />
                             <h4>{t.author}</h4>
                             <p>{t.title}</p>
                         </div>
                     </CardHeader>
-                    <CardBody style={{ padding: 0 }}>
-                        <img src={t.img} width={m ? 180 : 280} height={m ? 180 : 280} />
-                    </CardBody>
-                    <CardFooter className={classes.cardFooter}>
-                        <h4>{t.desc}</h4>
-                        <IconButton aria-label="Play" onClick={() => alert("click")}>
+                    <CardHeader color="primary" className={classes.cardHeader}
+                        style={{ padding: m ? 0 : false, margin: m ? 0 : false, }}
+                    >
+                        <div>
+                            <h4>{t.author}</h4>
+                            <p>{t.title}</p>
+                        </div>
+                        <IconButton aria-label="Play" onClick={() => alert("click")} style={{ borderWidth: 1, borderColor: 'red' }}>
                             <InfoIcon />
                         </IconButton>
+                    </CardHeader>
+                    <CardBody style={{ padding: 0 }}>
+                    </CardBody>
+                    <CardFooter className={classes.cardFooter} style={{ padding: m ? 0 : false, margin: m ? 0 : false, }}>
+                        <h4>{t.desc}</h4>
 
                     </CardFooter>
                 </Card>
@@ -232,8 +245,9 @@ class TilebarGridList extends React.Component {
 
         return (
             <div className={classes.root}>
-                <GridContainer justify="center">
-                    <GridItem xs={12} sm={12} md={8}>
+
+                <GridContainer justify="center" style={{ margin: 0 }}>
+                    <GridItem xs={12} sm={12} md={12}>
                         <NavPills
                             needdata={this.pillindex.bind(this)}
                             tabs={[
@@ -241,7 +255,7 @@ class TilebarGridList extends React.Component {
                                     tabButton: "Testimony",
                                     tabContent: (
                                         <GridContainer justify="center">
-                                            <GridItem xs={12} sm={12} md={12} lg={10} style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-evenly" }}>
+                                            <GridItem xs={12} sm={12} md={12} lg={10} style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between" }}>
                                                 {this.renderdata(0)}
                                             </GridItem>
                                         </GridContainer>),
@@ -250,8 +264,8 @@ class TilebarGridList extends React.Component {
                                 {
                                     tabButton: "Songs",
                                     tabContent: (
-                                        <GridContainer justify="center">
-                                            <GridItem xs={12} sm={12} md={12} lg={10} style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-evenly" }}>
+                                        <GridContainer justify="center" style={{ marginRight: 13 }}>
+                                            <GridItem xs={12} sm={12} md={12} lg={10} style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between" }}>
                                                 {this.renderdata(1)}
                                             </GridItem>
                                         </GridContainer>
@@ -261,8 +275,8 @@ class TilebarGridList extends React.Component {
                                 {
                                     tabButton: "Seremons",
                                     tabContent: (
-                                        <GridContainer justify="center">
-                                            <GridItem xs={12} sm={12} md={12} lg={10} style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-evenly" }}>
+                                        <GridContainer justify="center" style={{ marginRight: 13 }}>
+                                            <GridItem xs={12} sm={12} md={12} lg={10} style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between" }}>
                                                 {this.renderdata(2)}
                                             </GridItem>
                                         </GridContainer>
@@ -273,7 +287,6 @@ class TilebarGridList extends React.Component {
 
                             ]}
                         >
-
                         </NavPills>
                     </GridItem>
                 </GridContainer>

@@ -37,8 +37,8 @@ const pillsStyle = theme => ({
   },
   RootTops: { display: "flex" },
   container: {
-    paddingRight: "15px",
-    paddingLeft: "15px",
+    paddingRight: m ? 0 : "15px",
+    paddingLeft: m ? 0 : "15px",
     marginRight: "auto",
     marginLeft: "auto",
     width: "100%",
@@ -108,12 +108,10 @@ class SectionPills extends React.Component {
     return (
       <div className={classes.section}>
         <div className={classes.container}>
-          <div id="navigation-pills">
-            <div className={classes.title}>
-              <h3>Our Organization</h3>
-            </div>
+          <div id="navigation-p ills">
 
-            <GridContainer justify="center">
+
+            <GridContainer justify="center" style={{ margin: 0 }}>
               <GridItem xs={12} sm={12} md={12} lg={8}>
                 <NavPills
                   color="primary"
@@ -142,7 +140,7 @@ class SectionPills extends React.Component {
                           <Card
                             className={classes.top}
                           >
-  
+
                           </Card>
                           <div className={classes.details}>
 

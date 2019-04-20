@@ -75,7 +75,7 @@ class Header extends React.Component {
     });
     const brandComponent = <Button className={classes.title}>{brand}</Button>;
     return (
-      <AppBar className={appBarClasses}>
+      <AppBar className={[appBarClasses]} >
         <Toolbar className={classes.container}>
           {leftLinks !== undefined ? brandComponent : null}
           <div className={classes.flex}>
@@ -122,7 +122,7 @@ class Header extends React.Component {
 }
 
 Header.defaultProp = {
-  color: "white"
+  color: "dark"
 };
 
 Header.propTypes = {
@@ -136,7 +136,8 @@ Header.propTypes = {
     "transparent",
     "white",
     "rose",
-    "dark"
+    "dark",
+    "nero",
   ]),
   rightLinks: PropTypes.node,
   leftLinks: PropTypes.node,

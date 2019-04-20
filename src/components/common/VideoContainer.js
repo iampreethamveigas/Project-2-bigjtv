@@ -9,7 +9,9 @@ import Card from '@material-ui/core/Card';
 // import Button from '@material-ui/core/Button';
 // import Typography from '@material-ui/core/Typography';
 // import ReactPlayer from 'react-player'
- 
+
+import { b, m } from './Device'
+
 import ReactFlowPlayer from "react-flow-player";
 
 const styles = {
@@ -25,9 +27,8 @@ const styles = {
 function MediaCard(props) {
   const { classes } = props;
   return (
-    <Card>
-
-      <div style={{   background: '#121210' }}>
+    <Card style={{ borderRadius: 0, marginTop: m ? 80 : 5 }}>
+      <div style={{ background: '#121210' }}>
         <ReactFlowPlayer
           playerInitScript="https://releases.flowplayer.org/7.2.4/commercial/flowplayer.min.js"
           playerId="reactFlowPlayer"
@@ -41,10 +42,9 @@ function MediaCard(props) {
               src: "http://bigjtv.livebox.co.in/bigjtvhls/live.m3u8"
             }
           ]}
-        />;
-        </div>
+        />
+      </div>
     </Card>
-
   );
 }
 

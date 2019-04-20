@@ -4,7 +4,7 @@ import classNames from "classnames";
 // nodejs library to set properties for components
 import PropTypes from "prop-types";
 import SwipeableViews from 'react-swipeable-views';
-
+import { m, b } from '../common/Device'
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 import Tabs from "@material-ui/core/Tabs";
@@ -29,8 +29,8 @@ const navPillsStyle = theme => ({
     marginBottom: "0",
     overflow: "visible !important"
   },
-  tabContent:{
-    padding: 15,
+  tabContent: {
+    padding: m ? 0 : 15,
     minHeight: 100,
     color: '#000'
   },
@@ -190,7 +190,7 @@ class NavPills extends React.Component {
         value={this.state.active}
         onChange={this.handleChange}
         centered={alignCenter}
-        >
+      >
         {tabs.map((prop, key) => {
           var icon = {};
           if (prop.tabIcon !== undefined) {
@@ -223,7 +223,7 @@ class NavPills extends React.Component {
           axis={direction === "rtl" ? "x-reverse" : "x"}
           index={this.state.active}
           onChangeIndex={this.handleChangeIndex}
-          slideStyle={{padding: '5px'}}
+          slideStyle={{ padding: '5px' }}
         >
           {tabs.map((prop, key) => {
             return (
@@ -257,7 +257,7 @@ NavPills.defaultProps = {
 NavPills.propTypes = {
   classes: PropTypes.object.isRequired,
   // index of the default active pill
-   active: PropTypes.number,
+  active: PropTypes.number,
   tabs: PropTypes.arrayOf(
     PropTypes.shape({
       tabButton: PropTypes.string,

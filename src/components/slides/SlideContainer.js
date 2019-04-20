@@ -24,7 +24,7 @@ export const Menu = (list) => list.map((el,i) => {
       image={image}
       Main_content={Content}
       initial={initial}
-      key={i}
+      key={Name}
        />
     );
   });
@@ -39,8 +39,14 @@ const Arrow = ({ text, className }) => {
   };
 
 
-const ArrowLeft = <SkipPreviousIcon />;
-const ArrowRight = <SkipNextIcon />
+const ArrowLeft = {
+text:  <SkipPreviousIcon />,
+className: 'iconArrow'
+};
+const ArrowRight = {
+  text:  <SkipNextIcon />,
+  className: 'iconArrow'
+  };
 
 class SlideContent extends React.Component{
     state = {
@@ -60,11 +66,12 @@ class SlideContent extends React.Component{
 
        return(
         <div>
-          <HeaderTitle title="Preachers" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+          <HeaderTitle titlecolor="black" title="Preachers" description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
 " />
         <ScrollMenu
           data={menu}
-         
+          arrowLeft={Arrow(ArrowLeft)}
+          arrowRight={Arrow(ArrowRight)}
           selected={selected}
           onSelect={this.onSelect}
         />

@@ -11,6 +11,9 @@ import {
   boxShadow,
   drawerWidth
 } from "../../../jss/material-kit-react";
+import { m, b } from '../../../../components/common/Device'
+
+const width = window.innerWidth
 
 const headerStyle = {
   appBar: {
@@ -20,7 +23,7 @@ const headerStyle = {
     padding: "0.625rem 0",
     marginBottom: "20px",
     color: "#555",
-    width: "100%",
+    width: m ? width : '100%',
     backgroundColor: "#fff",
     boxShadow:
       "0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15)",
@@ -122,6 +125,11 @@ const headerStyle = {
     backgroundColor: "#fff !important",
     boxShadow:
       "0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15)"
+  },
+  nero: {
+    color: "#FFFFFF",
+    padding: "0.625rem 0",
+    backgroundColor: "#292929 !importants",
   },
   drawerPaper: {
     border: "none",

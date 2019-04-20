@@ -5,11 +5,11 @@ import PropTypes from "prop-types";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 import Grid from "@material-ui/core/Grid";
-
+import { m, b } from '../../components/common/Device'
 const style = {
   grid: {
-    marginRight: "-15px",
-    marginLeft: "-15px",
+    marginRight: m ? 0 : "-15px",
+    marginLeft: m ? 0 : "-15px",
     width: "auto"
   }
 };
