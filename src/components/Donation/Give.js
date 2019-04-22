@@ -140,7 +140,8 @@ class Give extends React.Component {
             "ORDER_ID": "20180801",
             "CUST_ID": "P2018",
             "INDUSTRY_TYPE_ID": "Retail109",
-            "CHANNEL_ID": "WEB"
+            "CHANNEL_ID": "WEB",
+            "CALLBACK_URL":"http://live.bigjtv.org/paytm/pgResponse.php"
         }
         axios.post(`http://live.bigjtv.org/paytm/pgRedirect.php`, data, {
             headers: {
